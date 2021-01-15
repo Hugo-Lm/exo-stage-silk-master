@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+mark:
+  name: Mark Zuckerberg
+  company: facebook
+
+evan:
+  name: Evan Spiegel
+  company: snapchat
+
+bill:
+  name: Bill Gates
+  company: microsoft
+
+steve:
+  name: Steve Jobs
+  company: apple
+
+elon:
+  name: Elon Musk
+  company: tesla
+
+serguey:
+  name: Sergey Brin
+  company: google
+
+larry:
+  name: Larry Page
+  company: google
+
+jeff:
+  name: Jeff Bezos
+  company: amazon
+
+travis:
+  name: Travis Kalanick
+  company: uber

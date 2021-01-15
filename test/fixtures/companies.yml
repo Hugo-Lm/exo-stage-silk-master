@@ -1,0 +1,41 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+facebook:
+  title: Facebook
+  code: FB
+
+snapchat:
+  title: Snapchat
+  code: SNAP
+
+microsoft:
+  title: Microsoft
+  code: MSFT
+
+apple:
+  title: Apple
+  code: AAPL
+
+tesla:
+  title: Tesla
+  code: TSLA
+
+google:
+  title: Alphabet
+  code: GOOGL
+
+amazon:
+  title: Amazon
+  code: AMZN
+
+uber:
+  title: Uber
+  code: UBER
+
+netflix:
+  title: Netflix
+  code: NFLX
+
+airbnb:
+  title: Airbnb
+  code: ABNB
