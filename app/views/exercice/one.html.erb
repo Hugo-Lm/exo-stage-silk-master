@@ -47,6 +47,11 @@
 <p>Réponse:</p>
 
 <%# Écrire réponse Exo 1.3 ici %>
-
+<ul class="list-group">
+<% @companies.each do |company| %>
+  <li class="list-group-item <%= style_color(company) %>"> <%= company.title %> </li>
+<% end %>
+</ul>
+<br/>
 
 <a href='/two' class='float-right'>Exercice suivant</a>
