@@ -2,9 +2,9 @@
   <div>
     <h3>{{ title }}</h3>
     <ul class="list-group">
-      <li class="list-group-item" 
+      <li class="list-group-item"
         v-for='company in items' :key='company.code'>
-        {{ company.title }}
+        {{ company.title }} {{message}}
       </li>
     </ul>
   </div>
@@ -13,7 +13,7 @@
 <script>
 import ListComponent from './TwoListComponent'
 export default {
-  name: 'TwoListComponent',
+  name: 'ListComponent',
   props: {
     title: {
       type: String,

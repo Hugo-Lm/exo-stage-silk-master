@@ -6,12 +6,13 @@
 <div class='alert alert-warning'>Disclaimer: À chaque étape, veuillez commit le résultat.</div>
 
 <h2>Listes de travail</h2>
-<p>Ci-dessous un composant VueJS pret à être modifié, représentant la liste des sociétés./p>
-<list-component title='Liste A' :items=<%= @items.to_json %>></list-component>
+<p>Ci-dessous un composant VueJS pret à être modifié, représentant la liste des sociétés</p>
+<list-component title='Liste A' :items=<%= @items.order(:title).to_json %>></list-component>
 
 <br/>
 <h3>Exo 2.1</h3>
 <p>Trier les sociétés par ordre alphabétique</p>
+
 <h3>Exo 2.2</h3>
 Pareil que l'exercice 1.3:
 
