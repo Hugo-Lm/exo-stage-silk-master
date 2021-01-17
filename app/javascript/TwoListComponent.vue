@@ -1,7 +1,7 @@
 <template>
   <div class="row p-3 bg-light">
     <div class="col-md-6">
-      <list-component title='Liste A' :items='listA' :checked='checkedBox'>{checkedBox}</list-component>
+      <list-component title='Liste A' :items='listA' :checked='checkedBox'></list-component>
     </div>
     <div class="col-md-6">
       <list-component title='Liste B' :items='listB' :checked='checkedBox'></list-component>
@@ -52,9 +52,6 @@ export default {
       this.listB.push(this.listA[this.listA.length - 1]);
       this.listA.pop()
     },
-    removeA: function () {
-      console.log(this.checkedBox)
-    }
   },
   computed: {
   },

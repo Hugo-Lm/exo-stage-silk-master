@@ -9,5 +9,6 @@ class ExerciceController < ApplicationController
 
   def three
     @items = Company.all
+    @companies_with_s_founder = Company.company_with_s_founder(@items)
   end
 end

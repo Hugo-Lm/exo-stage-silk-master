@@ -49,7 +49,6 @@ export default {
       }
     },
     removeA: function (company) {
-      console.log(this.checked)
       if (this.checked == 'yes' && company.title[0].toLowerCase() == "a") {
         return "text-removed"
       }
