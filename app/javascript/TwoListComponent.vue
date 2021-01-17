@@ -1,13 +1,23 @@
 <template>
   <div class="row p-3 bg-light">
     <div class="col-md-6">
-      <list-component title='Liste A' :items='listA'></list-component>
+      <list-component title='Liste A' :items='listA' :checked='checkedBox'>{checkedBox}</list-component>
     </div>
     <div class="col-md-6">
-      <list-component title='Liste B' :items='listB'></list-component>
+      <list-component title='Liste B' :items='listB' :checked='checkedBox'></list-component>
       <!-- <h3>Liste B</h3> -->
     </div>
-    <button v-on:click="lastItemToListB()" class="mt-2 btn btn-primary">Switch</button>
+    <div class="options-lists d-flex justify-content-around w-100 align-items-center mt-2">
+      <button v-on:click="lastItemToListB()" class="btn btn-primary">Switch</button>
+      <div class="a-checkbox">
+        <label for="removeA">Let's remove all those A's</label>
+        <input type="checkbox"
+          id="removeA"
+          v-model="checkedBox"
+          true-value="yes"
+          false-value="no">
+      </div>
+    </div>
   </div>
 
 </template>
@@ -33,13 +43,17 @@ export default {
   data () {
     return {
       listA: [],
-      listB: []
+      listB: [],
+      checkedBox: 'no'
     }
   },
   methods: {
     lastItemToListB: function () {
       this.listB.push(this.listA[this.listA.length - 1]);
       this.listA.pop()
+    },
+    removeA: function () {
+      console.log(this.checkedBox)
     }
   },
   computed: {

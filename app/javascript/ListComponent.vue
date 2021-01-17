@@ -2,7 +2,7 @@
   <div>
     <h3>{{ title }}</h3>
     <ul class="list-group">
-      <li :class="['list-group-item ', coloredTitle(company) ]"
+      <li :class="['list-group-item', coloredTitle(company), removeA(company) ]"
         v-for='company in items' :key='company.code'>
         {{ company.title }}
       </li>
@@ -22,6 +22,10 @@ export default {
     items: {
       type: Array,
       required: true
+    },
+    checked: {
+      type: String,
+      required: false
     }
   },
   components: {
@@ -43,6 +47,12 @@ export default {
       } else if (company.title.length % 2 != 0) {
         return "text-primary";
       }
+    },
+    removeA: function (company) {
+      console.log(this.checked)
+      if (this.checked == 'yes' && company.title[0].toLowerCase() == "a") {
+        return "text-removed"
+      }
     }
   },
   computed: {
@@ -57,4 +67,7 @@ export default {
 /* .row {
   background-color: #f5f5f5;
 } */
+  .text-removed {
+    text-decoration: line-through;
+  }
 </style>
