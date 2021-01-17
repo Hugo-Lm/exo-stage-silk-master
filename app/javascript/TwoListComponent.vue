@@ -3,11 +3,13 @@
     <div class="col-md-6">
       <list-component title='Liste A' :items='listA'></list-component>
     </div>
-      <!-- <list-component title='Liste B'></list-component> -->
     <div class="col-md-6">
-      <h3>Liste B</h3>
+      <list-component title='Liste B' :items='listB'></list-component>
+      <!-- <h3>Liste B</h3> -->
     </div>
+    <button v-on:click="lastItemToListB()" class="mt-2 btn btn-primary">Switch</button>
   </div>
+
 </template>
 
 <script>
@@ -30,10 +32,15 @@ export default {
   },
   data () {
     return {
-      listA: []
+      listA: [],
+      listB: []
     }
   },
   methods: {
+    lastItemToListB: function () {
+      this.listB.push(this.listA[this.listA.length - 1]);
+      this.listA.pop()
+    }
   },
   computed: {
   },
